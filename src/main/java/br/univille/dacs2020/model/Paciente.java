@@ -25,6 +25,10 @@ public class Paciente {
         return id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public Date getDataNascimento() {
         return dataNascimento;
     }
@@ -49,7 +53,5 @@ public class Paciente {
         this.nome = nome;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+  
 }
