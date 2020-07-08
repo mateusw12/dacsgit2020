@@ -15,10 +15,10 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.fasterxml.jackson.databind.util.ClassUtil.Ctor;
+
 
 @Entity
-public class consulta {
+public class Consulta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -27,7 +27,7 @@ public class consulta {
     private String status;
     
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
-    private paciente paciente;
+    private Paciente paciente;
 
     @OneToMany
     @JoinColumn(name = "CONSULTA_ID")
@@ -59,11 +59,11 @@ public class consulta {
         this.status = status;
     }
 
-    public paciente getPaciente() {
+    public Paciente getPaciente() {
         return paciente;
     }
 
-    public void setPaciente(paciente paciente) {
+    public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
     
